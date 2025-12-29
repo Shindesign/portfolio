@@ -1,0 +1,147 @@
+@charset "UTF-8";
+body {
+  background-image: url(../images/body-bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体",
+    "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+@media screen and (min-width: 750px) {
+  .body-inner {
+    max-width: 750px;
+    box-shadow: 0 1px 20px rgb(0 0 0 / 30%);
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+img {
+  width: 100%;
+  margin-top: -1px; /*--隙間調整--*/
+}
+
+
+
+/* コンテンツの横幅 */
+/* ============================================ */
+.contents-inner {
+  width: 100%;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* コンテンツの横幅 ここまで */
+/* ============================================ */
+
+
+/* ============================================ */
+
+
+/* CTAボタン */
+/* ============================================ */
+
+.offer-test {
+  position: relative;
+  display: inline-block;
+}
+
+.offerBG {
+  width: 100%;
+}
+
+.offer_btn {
+  width: 176%;
+  top: 44%;
+  left: -39%; 
+}
+
+.overlayItem {
+  position: absolute;
+}
+
+.button-animation .button {
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  animation: pulsate 2s infinite ease-in-out;
+  text-align: center;
+}
+
+
+.button-animation img {
+  width: 100%;
+}
+
+@keyframes pulsate {
+  0%, 40% {
+    transform: skew(0deg, 0deg);
+  }
+  5% {
+    transform: skew(5deg, 5deg);
+  }
+  10% {
+    transform: skew(-4deg, -4deg);
+  }
+  15% {
+    transform: skew(3deg, 3deg);
+  }
+  20% {
+    transform: skew(-2deg, -2deg);
+  }
+  25% {
+    transform: skew(1deg, 1deg);
+  }
+  30% {
+    transform: skew(-0.6deg, -0.6deg);
+  }
+  35% {
+    transform: skew(0.3deg, 0.3deg);
+  }
+
+}
+
+
+/* CTAボタン ここまで */
+/* ============================================ */
+
+/* footer */
+/* ============================================ */
+footer {
+  display: block;
+  padding-top: 10px;
+  border-top: 3px solid #ddd;
+  background: #fff;
+}
+ul {
+  list-style: none;
+}
+.footer_nav {
+  text-align: center;
+  padding: 10px 0;
+}
+.footer_nav li {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  border-right: #000 solid thin;
+  font-size: 13px;
+}
+.footer_nav li:nth-child(2) {
+  border-right: none;
+}
+.footer_nav li a {
+  text-decoration: none;
+  padding: 0 10px 0 0;
+  color: #000;
+}
+.footer_nav li:last-child {
+  border: none;
+}
+footer .copyright {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+/* footer ここまで */
+/* ============================================ */
