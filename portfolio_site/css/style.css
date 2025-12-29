@@ -1,0 +1,270 @@
+@charset "UTF-8";
+
+body {
+  background-image: url(../images/body-bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体",
+    "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  height: 300vh;
+}
+
+@media screen and (min-width: 750px) {
+  .body-inner {
+    max-width: 750px;
+    box-shadow: 0 1px 20px rgb(0 0 0 / 30%);
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.LPbox {
+  width: 89.40%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.LPitem {
+	list-style: none;
+	padding-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+  justify-content: space-between
+}
+
+.item {
+  width: calc(100% / 3)
+}
+
+h2 {
+  font-size: 1.4rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  background: #222;
+  color: #fff;
+}
+
+.head2 {
+  margin-top: 70px;
+}
+
+/* コンテンツの横幅 */
+/* ============================================ */
+.contents-inner {
+  width: 100%;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* コンテンツの横幅 ここまで */
+/* ============================================ */
+
+
+/* リンクボタン */
+
+.btn {
+  margin-top: 40px;
+}
+
+.btn a {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+/* ボタンを凹ませる */
+.btn a:active {
+  transform: translateY(4px); /*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); /*影を小さく*/
+  border-bottom: none;
+}
+/* ボタンをキラッとさせる */
+.btn a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background-image: linear-gradient(130deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 100) 81%, rgba(255, 255, 255, 0) 100%);
+  animation: shine 3s infinite; /* inifiniteによりずっと続ける */
+}
+@keyframes shine {
+  33% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* リンクボタンここまで */
+
+.seisaku {
+  margin: 20px 0 100px;
+}
+
+.profile {
+  margin-top: 150px;
+}
+
+/* アコーディオン */
+/* ============================================ */
+.accordion {
+  background-color: #ffffff;
+}
+
+.toggle-contents {
+  margin-bottom: 20px;
+  /*padding: 0 20px;*/ /*Qの幅*/
+}
+
+.toggle-title {
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 52%;
+  right: 9%; /*ボタンを開く＋の位置*/
+  transform: translateY(-50%);
+  display: block;
+  width: 24px;
+  height: 24px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.toggle-btn:before,
+.toggle-btn:after {
+  display: block;
+  content: "";
+  background-color: #ffffff;
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toggle-btn:before {
+  width: 2px;
+  height: 10px;
+}
+
+.toggle-title.selected .toggle-btn:before {
+  content: normal;
+}
+
+.toggle-contents dd {
+  display: none;
+  background: #fff;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* アコーディオン ここまで */
+/* ============================================ */
+
+/* フローティングボタン */
+/* ============================================ */
+
+.float-bnr {
+  height: 0;
+  opacity: 0;
+  transition: 1s;
+  pointer-events: none;
+}
+
+
+.float-bnr.show {
+  display: block;
+  height: auto;
+  opacity: 1;
+  transition: 1s;
+  pointer-events: painted;
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  bottom: 15px;
+  right: 48px;
+  z-index: 9997;
+}
+
+@media screen and (max-width: 750px) {
+.float-bnr.show {
+  position: fixed;
+  width: 105px;
+  height: 105px;
+  right: 0px;
+  bottom: 50px;
+}
+}
+/* フローティングボタン ここまで */
+/* ============================================ */
+
+
+/* footer */
+/* ============================================ */
+footer {
+  display: block;
+  padding-top: 10px;
+  border-top: 3px solid #ddd;
+  background: #fff;
+}
+
+ul {
+	list-style: none;
+}
+
+
+
+.footer_nav {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer_nav li {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  border-right: #000 solid thin;
+  font-size: 13px;
+}
+
+.footer_nav li:nth-child(2) {
+  border-right: none;
+}
+
+.footer_nav li a {
+  text-decoration: none;
+  padding: 0 10px 0 0;
+  color: #000;
+}
+
+.footer_nav li:last-child {
+  border: none;
+}
+
+footer .copyright {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+/* footer ここまで */
+/* ============================================ */
